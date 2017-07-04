@@ -1,1 +1,0 @@
-unzip phantomjs.zip -d phantomjs.binary
