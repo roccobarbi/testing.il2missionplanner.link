@@ -7,7 +7,8 @@ function CustomWorld() {
             browserName: 'phantomjs',
             javascriptEnabled: true,
             acceptSslCerts: true,
-            takesScreenshot: false
+            takesScreenshot: false,
+            "phantomjs.binary.path": "phantomjs.binary"
         }).build();
 }
 
