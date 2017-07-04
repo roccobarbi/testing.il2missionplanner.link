@@ -1,0 +1,12 @@
+{
+  "name": "testing.il2missionplanner.com",
+  "version": "1.0.0",
+  "description": "End-to-end browser testing for il2missionplanner.com",
+  "main": "run.js",
+  "author": "Gavin Cabbage <gavincabbage@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cucumber": "^2.3.1",
+    "selenium-webdriver": "^3.4.0"
+  }
+}
