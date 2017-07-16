@@ -1,19 +1,7 @@
 var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
-function PhantomJSWorld() { // Requires included phantomjs binary.
-    this.driver = new seleniumWebdriver.Builder()
-        .withCapabilities({
-            browserName: 'phantomjs',
-            javascriptEnabled: true,
-            acceptSslCerts: true,
-            takesScreenshot: false,
-            "phantomjs.binary.path": "phantomjs.binary"
-        }).build();
-}
-
 function ChromeWorld() { // Requires 'chrome' on PATH
-    require('chromedriver');
     this.driver = new seleniumWebdriver.Builder()
         .withCapabilities({
             browserName: 'chrome',
@@ -24,7 +12,6 @@ function ChromeWorld() { // Requires 'chrome' on PATH
 }
 
 function HeadlessChromeWorld() { // Requires 'chrome' on PATH
-    require('chromedriver');
     this.driver = new seleniumWebdriver.Builder()
         .withCapabilities({
             browserName: 'chrome',
@@ -40,7 +27,7 @@ var worldMap = {
     'chrome' : ChromeWorld,
     'headless-chrome': HeadlessChromeWorld,
 }
-var configuredWorld = worldMap[process.env['IL2_TESTING_BROWSER']];
+var configuredWorld = worldMap[process.env['TESTING_BROWSER']];
 var worldConstructor = configuredWorld ? configuredWorld : ChromeWorld;
 
 defineSupportCode(function({setWorldConstructor}) {

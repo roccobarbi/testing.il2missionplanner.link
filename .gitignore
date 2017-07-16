@@ -1,7 +1,2 @@
 .idea/
-package-lock.json
-dist/
 node_modules
-*.binary
-*/runner.zip
-*/manager.zip
