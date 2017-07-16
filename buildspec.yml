@@ -9,6 +9,9 @@ phases:
     commands:
       - apt-get install chrome
       - npm install
+  pre_build:
+    commands:
+      - ls
   build:
     commands:
       - ./node_modules/cucumber/bin/cucumber.js
