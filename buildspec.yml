@@ -7,11 +7,6 @@ env:
 phases:
   install:
     commands:
-      - cd /tmp
-      - apt-get install gconf-service libasound2 libatk1.0.0 libcups2 libconf-2-4 libgtk-3-0 libnspr4 libx11-xcb1 libcomposite1
-      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - sudo dpkg -i google-chrome-stable_current_amd64.deb; sudo apt-get -f install
-      - cd -
       - npm install
   pre_build:
     commands:
