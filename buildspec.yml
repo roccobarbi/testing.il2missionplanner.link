@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - apt-get install chromdriver
+      - apt-get install chromedriver
       - npm install
   pre_build:
     commands:
