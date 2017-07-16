@@ -1,0 +1,14 @@
+version: 0.2
+
+env:
+  variables:
+    TESTING_BROWSER: "headless-chrome"
+
+phases:
+  install:
+    commands:
+      - apt-get install chrome
+      - npm install
+  build:
+    commands:
+      - ./node_modules/cucumber/bin/cucumber.js

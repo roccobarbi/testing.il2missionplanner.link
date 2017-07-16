@@ -23,7 +23,6 @@ function HeadlessChromeWorld() { // Requires 'chrome' on PATH
 }
 
 var worldMap = {
-    'phantomjs' : PhantomJSWorld,
     'chrome' : ChromeWorld,
     'headless-chrome': HeadlessChromeWorld,
 }
