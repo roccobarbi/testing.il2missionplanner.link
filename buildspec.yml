@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - apt-get install chrome
+      - apt-get install chromium-browser
       - npm install
   pre_build:
     commands:
